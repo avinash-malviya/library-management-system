@@ -17,7 +17,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // React app URL
+  origin: 'https://library-management-system-2axh.onrender.com', // React app URL
   credentials: true
 }));
 app.use(express.json());
