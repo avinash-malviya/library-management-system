@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://https://library-management-system-2axh.onrender.com/api';
+const API_URL = 'https://library-management-system-2axh.onrender.com/api';
 
 // Create axios instance with default config
 const api = axios.create({

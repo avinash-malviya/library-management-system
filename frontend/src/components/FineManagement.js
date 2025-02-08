@@ -26,7 +26,7 @@ const FineManagement = () => {
 
   const fetchFines = async () => {
     try {
-      const response = await axios.get('http://https://library-management-system-2axh.onrender.com/api/fines/unpaid');
+      const response = await axios.get('https://library-management-system-2axh.onrender.com/api/fines/unpaid');
       setFines(response.data.transactions);
       setTotalFine(response.data.totalUnpaidFines);
     } catch (error) {
@@ -42,7 +42,7 @@ const FineManagement = () => {
 
   const handlePayFine = async (transactionId) => {
     try {
-      await axios.post(`http://https://library-management-system-2axh.onrender.com/api/fines/pay/${transactionId}`);
+      await axios.post(`https://library-management-system-2axh.onrender.com/api/fines/pay/${transactionId}`);
       toast({
         title: 'Fine paid successfully',
         status: 'success',
