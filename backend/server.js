@@ -20,7 +20,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-    origin: 'https://library-management-system-2axh.onrender.com',
+    origin: 'https://library-management-system-qfoc.vercel.app',
     credentials: true
 }));
 app.use(express.json());
