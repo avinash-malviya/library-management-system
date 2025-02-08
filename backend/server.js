@@ -20,7 +20,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Middleware
 app.use(cors({
-    origin: 'https://library-management-system-qfoc.vercel.app',
+    origin: '*',
     credentials: true
 }));
 app.use(express.json());
