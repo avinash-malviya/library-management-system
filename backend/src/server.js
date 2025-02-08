@@ -17,7 +17,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://library-management-system-2axh.onrender.com', // React app URL
+  origin: 'https://library-management-system-qfoc.vercel.app', // React app URL
   credentials: true
 }));
 app.use(express.json());
