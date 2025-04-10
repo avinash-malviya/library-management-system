@@ -38,7 +38,8 @@ router.post('/register', [
       email,
       password,
       role: 'user',
-      isApproved: false // Only regular users need approval
+      isApproved: false , // Only regular users need approval
+      pendingApproval: true 
     });
 
     // Hash password
@@ -143,7 +144,7 @@ router.get('/pending-approvals', authenticate, async (req, res) => {
     }
 
     // Get all users pending approval
-    const pendingUsers = await User.find({ isApproved: false, role: 'user' })
+    const pendingUsers = await User.find({ pendingApproval: true, role: 'user' })
       .select('-password')
       .sort({ createdAt: -1 });
 
@@ -177,6 +178,7 @@ router.put('/approve-user/:userId', authenticate, async (req, res) => {
     }
 
     user.isApproved = approved;
+    user.pendingApproval = false;
     await user.save();
 
     res.json({ 
