@@ -26,6 +26,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  pendingApproval: {
+    type: Boolean,
+    default: false
+  },
   /* Commented out status and image fields
   status: {
     type: String,
